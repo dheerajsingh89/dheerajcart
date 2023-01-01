@@ -1,0 +1,28 @@
+{% extends 'shop/basic.html' %}
+{% block title %}Product{% endblock%}
+{% block css%}
+.container{
+    display:flex;
+    
+}
+img{
+    height:35rem;
+    width:40rem;
+}
+
+{%endblock%}
+{% block body %}
+<div class="container">
+    <div class="img my-4">
+        <img src="/media/{{product.image}}" class="image">
+    </div>
+    <div class="information mx-5 my-4" >
+        <h1 class="my-5">{{product.product_name}}</h1>
+        <h3 class="my-3">Price : Rs {{product.price}}000</h3>
+        <h5 class="my-3">{{product.desc}}</h5>
+        <span><button class="btn btn-primary add_cart" id="prod{{i.id}}" >Add to cart</button>
+            <button class="btn btn-primary buy_now" id="prodbuy{{i.id}}" >Buy now</button></span>
+    </div>
+    
+</div>
+{% endblock %}

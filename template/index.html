@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title%}{%endblock%}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Blaka&family=Tiro+Devanagari+Hindi:ital@1&display=swap" rel="stylesheet">
+    <style>
+        .screen {
+            height: 100vh;
+            width: auto;
+            /* background-image: url("https://images.pexels.com/photos/716398/pexels-photo-716398.jpeg?auto=compress&cs=tinysrgb&w=600"); */
+            /* background-color: black; */
+            opacity: 0.8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .foot {
+            background-color: rgb(220, 216, 216);
+            color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #text {
+            font-size: 60px;
+            font-weight: bold;
+            font-style: normal;
+            font-family: 'Tiro Devanagari Hindi', serif;
+        }
+        
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 2s ease-in-out 0.5s;
+        }
+        
+        .box:hover {
+            transform: scale(1.3);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light  bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Dheeraj Mart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="shop/">Go to shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">Admin site</a>
+                    </li>
+
+
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+
+                    <button class="btn btn-secondary btn-sm mx-2" id="popcart" data-bs-toggle="popover" title="Cart " data-bs-content="here is the cart of our shop">  Cart(<span id="cart_items">0</span>)</button>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="screen">
+        <div class="transform">
+            <div class="box">
+                <a href="shop/"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlT9_t5nE0GXppKiuVH23r2UEqET5BfGzHwA&usqp=CAU" alt="" class="imagescreen"></a>
+                <p><b id="text">click on image to go to shop</b></p>
+
+            </div>
+        </div>
+    </div>
+    {% block body %}{% endblock %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <footer>
+        <div class="foot">
+            <p>
+                copyright &copy;www.khanawallah.com All right reserved
+            </p>
+        </div>
+    </footer>
+    <script>
+        < script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" >
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3 " crossorigin="anonymous "></script>
+    </script>
+</body>
+
+</html>
