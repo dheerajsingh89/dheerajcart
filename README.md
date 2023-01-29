@@ -1,3 +1,3 @@
 # dheerajcart
 ## About this
-_this is a e commerce website using django which contains front end as well as backend part_
+_this is an e-commerce website which I created using django that contains front end as well as backend part_
